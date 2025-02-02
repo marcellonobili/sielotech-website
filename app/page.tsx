@@ -49,7 +49,7 @@ export default function Home() {
           
           <div className="flex gap-4 mt-8 md:mt-0">
             <Button variant="outline" asChild className="gap-2">
-              <Link href="mailto:contact@sielotech.com" target="_blank" rel="noopener noreferrer" aria-label="Email">
+              <Link href="mailto:marcellonobili@pm.me" target="_blank" rel="noopener noreferrer" aria-label="Email">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none">
                   <path d="M22 4H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h20a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zM12 12.73L2.83 6h18.34L12 12.73zM2 18V7.89l9.24 6.85.12.09c.37.28.89.28 1.27 0l.12-.09L22 7.89V18H2z"/>
                 </svg>
@@ -213,7 +213,7 @@ export default function Home() {
                 Ah-ha! That was a lie! It was just me all along, Marcello Nobili aka Sielo! I am a freelance mobile and backend developer, putting a lot 
                 of effort into producing the best software I can. I'm studying Japanese and while I conceive most of SieloTech's software
                 to help me in the first place, I strive to help the most people I can in the process. If you have an interesting feature to tell
-                me about, send me an email at <a className="text-primary hover:underline" href="mailto:contact@sielotech.com">contact@sielotech.com</a>!
+                me about, send me an email at <a className="text-primary hover:underline" href="mailto:marcellonobili@pm.me">marcellonobili@pm.me</a>!
               </p>
             </div>
           </div>

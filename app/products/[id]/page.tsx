@@ -10,7 +10,7 @@ const products = [
     name: "Furigana API",
     description: `Kanji are though. It's useless to lie. We provide straightfoward API to get furigana from kanji.
     
-You can use them for free up to 100 requests per day, after that you can start a subscription for a very small price.
+You can use them for free up to 100 requests per month, after that you can start a subscription for a very small price.
 
 This page is still a work in progress, we will finalize the API and provide links to the documentation soon.`,
   },
