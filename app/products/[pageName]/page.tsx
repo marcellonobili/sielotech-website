@@ -6,7 +6,7 @@ import ReactMarkdown from 'react-markdown'
 
 const products = [
   {
-    id: 1,
+    pageName: "furigana-api",
     name: "Furigana API",
     description: `Kanji are though. It's useless to lie. We provide straightfoward API to get furigana from kanji.
     
@@ -17,15 +17,13 @@ This page is still a work in progress, we will finalize the API and provide link
 ]
 
 export async function generateStaticParams() {
-  return [
-    { id: "1" },
-  ];
+  return products.map((product) => ({
+    pageName: product.pageName,
+  }));
 }
 
-export default function ProductPage({ params }: { params: { id: string } }) {
-  const productId = Number.parseInt(params.id);
-  console.log("Product ID:", productId);
-  const product = products.find((p) => p.id === productId);
+export default function ProductPage({ params }: { params: { pageName: string } }) {
+  const product = products.find((p) => p.pageName === params.pageName);
 
   if (!product) {
     notFound();

@@ -6,7 +6,7 @@ import { useMemo } from "react"
 import ReactMarkdown from 'react-markdown'
 
 const products = [
-  { id: 1, name: "Furigana API", description: "Convert any kanji to hiragana with our simple API", image: "/assets/images/furigana.png" },
+  { id: 1, pageName: "furigana-api", name: "Furigana API", description: "Convert any kanji to hiragana with our simple API", image: "/assets/images/furigana.png" },
 ]
 
 const presents = [
@@ -43,7 +43,7 @@ export default function Home() {
           <div>
             <h1 className="text-6xl font-bold">SieloTech</h1>
             <p className="text-lg text-muted-foreground mt-4">
-              Loving Japan more every day
+              Loving Japan more each day
             </p>
           </div>
           
@@ -87,7 +87,7 @@ export default function Home() {
           <h1 className="text-3xl font-bold mb-12">Our Products</h1>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {products.map((product) => (
-              <Link href={`/products/${product.id}`} key={product.id}>
+              <Link href={`/products/${product.pageName}`} key={product.id}>
                 <Card className="hover-effect overflow-hidden h-56">
                   <div className="relative h-full">
                     <Image
