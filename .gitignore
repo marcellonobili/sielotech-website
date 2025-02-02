@@ -8,6 +8,7 @@ public/components
 public/hooks
 public/.pnp
 public.pnp.js
+.next
 
 .firebase
 
@@ -42,3 +43,5 @@ public/.vercel
 public/next-env.d.ts
 
 # End of https://www.toptal.com/developers/gitignore/api/nextjs
+
+out/
