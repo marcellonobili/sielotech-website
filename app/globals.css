@@ -43,21 +43,18 @@
 }
 
 @layer components {
-  @keyframes float {
-    0%, 60% {
-      transform: translate(0px, 0px) rotate(0deg);
+  @keyframes jump {
+    0%, 90% {
+      transform: translateY(0) rotate(0deg);
     }
-    61% {
-      transform: translate(8px, -12px) var(--rotation-1);
+    93% {
+      transform: translateY(-15px) rotate(2deg);
     }
-    62% {
-      transform: translate(-5px, -20px) var(--rotation-2);
+    96% {
+      transform: translateY(-5px) rotate(-2deg);
     }
-    63% {
-      transform: translate(-8px, -12px) var(--rotation-1);
-    }
-    64%, 100% {
-      transform: translate(0px, 0px) rotate(0deg);
+    100% {
+      transform: translateY(0) rotate(0deg);
     }
   }
 
@@ -80,19 +77,27 @@
   }
 
   .hover-effect {
-    transition: transform 0.3s ease-in-out;
+    @apply hover:scale-105 hover:shadow-lg;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   }
 
-  .hover-effect:hover {
-    transform: scale(1.05);
-  }
-
-  .present-hover {
-    animation: float 6.5s linear infinite;
+  .animate-jump {
+    animation: jump 3s ease-in-out infinite;
+    animation-duration: calc(2s + (random() * 2s));
     will-change: transform;
   }
 
-  .present-hover:hover {
-    animation: shake 0.3s linear infinite;
+  /* Mobile: shake on active (touch) */
+  @media (max-width: 768px) {
+    .animate-jump:active {
+      animation: shake 0.3s linear infinite;
+    }
+  }
+
+  /* Desktop: shake on hover */
+  @media (min-width: 769px) {
+    .animate-jump:hover {
+      animation: shake 0.3s linear infinite;
+    }
   }
 }

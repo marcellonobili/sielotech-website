@@ -3,6 +3,7 @@ import Link from "next/link"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { useMemo } from "react"
+import ReactMarkdown from 'react-markdown'
 
 const products = [
   { id: 1, name: "Furigana API", description: "Convert any kanji to hiragana with our simple API", image: "/assets/images/furigana.png" },
@@ -101,7 +102,11 @@ export default function Home() {
                           <CardTitle className="text-2xl text-white">{product.name}</CardTitle>
                         </CardHeader>
                         <CardContent className="py-2">
-                          <p className="text-gray-300">{product.description}</p>
+                          <div className="text-gray-300 prose prose-invert prose-sm max-w-none [&_a]:text-primary [&_a]:no-underline [&_a:hover]:underline">
+                            <ReactMarkdown>
+                              {product.description}
+                            </ReactMarkdown>
+                          </div>
                         </CardContent>
                       </div>
                     </div>
@@ -118,7 +123,7 @@ export default function Home() {
               return (
                 <Card 
                   key={product.id} 
-                  className="hover-effect present-hover overflow-hidden h-56 animate-float"
+                  className="hover-effect animate-jump overflow-hidden h-56"
                   style={{
                     animationDelay: `-${randomDelay}s`,
                     '--rotation-1': rotation1,
@@ -127,19 +132,19 @@ export default function Home() {
                 >
                   <div className="relative h-full">
                     {/* Gift box */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-purple-600 to-purple-800">
+                    <div className="absolute inset-0 bg-[#ba8b00]">
                       {/* Ribbon */}
-                      <div className="absolute inset-0 bg-gradient-to-br from-purple-600 to-purple-800">
+                      <div className="absolute inset-0">
                         {/* Vertical ribbon */}
-                        <div className="absolute top-0 bottom-0 left-1/2 w-6 bg-red-500 transform -translate-x-1/2">
-                          <div className="absolute inset-y-0 left-0 w-[2px] bg-black"></div>
-                          <div className="absolute inset-y-0 right-0 w-[2px] bg-black"></div>
+                        <div className="absolute top-0 bottom-0 left-1/2 w-6 bg-red-600 transform -translate-x-1/2">
+                          <div className="absolute inset-y-0 left-0 w-[2px] bg-black/20"></div>
+                          <div className="absolute inset-y-0 right-0 w-[2px] bg-black/20"></div>
                         </div>
                         
                         {/* Horizontal ribbon */}
-                        <div className="absolute left-0 right-0 top-1/2 h-6 bg-red-500 transform -translate-y-1/2">
-                          <div className="absolute inset-x-0 top-0 h-[2px] bg-black"></div>
-                          <div className="absolute inset-x-0 bottom-0 h-[2px] bg-black"></div>
+                        <div className="absolute left-0 right-0 top-1/2 h-6 bg-red-600 transform -translate-y-1/2">
+                          <div className="absolute inset-x-0 top-0 h-[2px] bg-black/20"></div>
+                          <div className="absolute inset-x-0 bottom-0 h-[2px] bg-black/20"></div>
                         </div>
                       </div>
 
@@ -203,10 +208,10 @@ export default function Home() {
             />
             <div>
               <p className="text-lg text-muted-foreground">
-                That was a lie! It's actually just me for now, Marcello Nobili aka Sielo. I am a freelance mobile and backend developer, putting a lot 
+                Ah-ha!That was a lie! It's actually just me all along, Marcello Nobili aka Sielo! I am a freelance mobile and backend developer, putting a lot 
                 of effort into producing the best software I can. I'm studying Japanese and while I conceive most of SieloTech's software
                 to help me in the first place, I strive to help the most people I can in the process. If you have an interesting feature to tell
-                me about, send me an email at <a className="text-blue-500 hover:underline" href="mailto:contact@sielotech.com">contact@sielotech.com</a>!
+                me about, send me an email at <a className="text-primary hover:underline" href="mailto:contact@sielotech.com">contact@sielotech.com</a>!
               </p>
             </div>
           </div>
