@@ -1,0 +1,22 @@
+{
+    "hosting": {
+        "site": "sielotech-websites",
+        "public": "public/out",
+        "ignore": [
+            "firebase.json",
+            "**/.*",
+            "**/node_modules/**"
+        ],
+        "cleanUrls": true,
+        "rewrites": [
+            {
+                "source": "/products/**",
+                "destination": "/products/[id].html"
+            },
+            {
+                "source": "**",
+                "destination": "/index.html"
+            }
+        ]
+    }
+}
