@@ -115,19 +115,21 @@ export default function Home() {
               </Link>
             ))}
             {presents.map((product, index) => {
-              const randomDelay = (Math.random() * 1 + 3).toFixed(2); // Random tra 3.00 e 5.00 secondi
               const isClockwise = Math.random() < 0.5;
               const rotation1 = isClockwise ? 'rotate(4deg)' : 'rotate(-4deg)';
               const rotation2 = isClockwise ? 'rotate(8deg)' : 'rotate(-8deg)';
+              const baseDelay = Math.random() * 5; // Random base delay between 0-5s
+              const baseDuration = 2 + Math.random() * 3; // Random duration between 2-5s
               
               return (
                 <Card 
                   key={product.id} 
                   className="hover-effect animate-jump overflow-hidden h-56"
                   style={{
-                    animationDelay: `-${randomDelay}s`,
                     '--rotation-1': rotation1,
                     '--rotation-2': rotation2,
+                    '--animation-delay': `-${baseDelay}s`,
+                    '--animation-duration': `${baseDuration}s`,
                   } as React.CSSProperties}
                 >
                   <div className="relative h-full">

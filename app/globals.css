@@ -46,12 +46,15 @@
   @keyframes jump {
     0%, 90% {
       transform: translateY(0) rotate(0deg);
+      animation-timing-function: steps(1);
     }
     93% {
       transform: translateY(-15px) rotate(2deg);
+      animation-timing-function: ease-out;
     }
     96% {
       transform: translateY(-5px) rotate(-2deg);
+      animation-timing-function: ease-in;
     }
     100% {
       transform: translateY(0) rotate(0deg);
@@ -82,9 +85,17 @@
   }
 
   .animate-jump {
-    animation: jump 3s ease-in-out infinite;
-    animation-duration: calc(2s + (random() * 2s));
+    --animation-delay: -2s;
+    --animation-duration: 4s;
+    animation: jump var(--animation-duration) cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    animation-delay: var(--animation-delay);
+    animation-play-state: paused;
+    animation-iteration-count: infinite;
     will-change: transform;
+  }
+
+  .animate-jump:not(:hover):not(:active) {
+    animation-play-state: running;
   }
 
   /* Mobile: shake on active (touch) */
