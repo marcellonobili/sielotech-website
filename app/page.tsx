@@ -208,7 +208,7 @@ export default function Home() {
             />
             <div>
               <p className="text-lg text-muted-foreground">
-                Ah-ha!That was a lie! It's actually just me all along, Marcello Nobili aka Sielo! I am a freelance mobile and backend developer, putting a lot 
+                Ah-ha! That was a lie! It was just me all along, Marcello Nobili aka Sielo! I am a freelance mobile and backend developer, putting a lot 
                 of effort into producing the best software I can. I'm studying Japanese and while I conceive most of SieloTech's software
                 to help me in the first place, I strive to help the most people I can in the process. If you have an interesting feature to tell
                 me about, send me an email at <a className="text-primary hover:underline" href="mailto:contact@sielotech.com">contact@sielotech.com</a>!

@@ -12,15 +12,13 @@ const products = [
     
 You can use them for free up to 100 requests per day, after that you can start a subscription for a very small price.
 
-To get started, visit our [API documentation](https://api.sielotech.com/docs/furigana).`,
+This page is still a work in progress, we will finalize the API and provide links to the documentation soon.`,
   },
 ]
 
 export async function generateStaticParams() {
   return [
     { id: "1" },
-    { id: "2" },
-    { id: "3" }
   ];
 }
 
