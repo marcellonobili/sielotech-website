@@ -84,10 +84,11 @@ export default function Home() {
         </div>
 
         <section>
-          <h1 className="text-3xl font-bold mb-12">Our Products</h1>
+          <h1 className="text-3xl font-bold mb-12">My Products</h1>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {products.map((product) => (
-              <Link href={`/products/${product.pageName}`} key={product.id}>
+              <Link href={`https://docs.sielotech.com/api/furigana`} key={product.id}>
+              {/* <Link href={`/products/${product.pageName}`} key={product.id}> */}
                 <Card className="hover-effect overflow-hidden h-56">
                   <div className="relative h-full">
                     <Image
@@ -199,23 +200,32 @@ export default function Home() {
         </section>
 
         <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-12">Who are we?</h2>
+          <h2 className="text-3xl font-bold mb-12">Who Am I?</h2>
           <div className="flex flex-col md:flex-row items-center gap-8">
-            <Image
-              src="/assets/images/sielo.jpg"
-              alt="Marcello, founder of SieloTech"
-              width={200}
-              height={200}
-              className="rounded-full w-[200px] h-[200px] object-cover"
-            />
+            <a href="/marcellonobili" className="block w-[220px] h-[220px] rounded-md overflow-hidden flex-shrink-0">
+              <Image
+                src="/assets/images/sielo.jpg"
+                alt="Marcello, founder of SieloTech"
+                width={220}
+                height={220}
+                className="w-full h-full object-cover"/>
+            </a>
             <div>
               <p className="text-lg text-muted-foreground">
-                Ah-ha! That was a lie! It was just me all along, Marcello Nobili aka Sielo! I am a freelance mobile and backend developer, putting a lot 
-                of effort into producing the best software I can. I'm studying Japanese and while I conceive most of SieloTech's software
-                to help me in the first place, I strive to help the most people I can in the process. If you have an interesting feature to tell
+                I'm Marcello Nobili, the founder of SieloTech! I put a lot of effort into producing the best software I can.<br/><br/>
+                I'm studying Japanese and while I conceive most of SieloTech's software
+                to help me in the first place, I strive to help the most people I can in the process.<br/>
+                If you have an interesting idea or feature to tell
                 me about, send me an email at <a className="text-primary hover:underline" href="mailto:marcellonobili@pm.me">marcellonobili@pm.me</a>!
               </p>
             </div>
+          </div>
+          <br/>
+          <br/>
+          <div>
+            <p className="text-lg text-muted-foreground">
+              I also work as a Freelance Mobile and Backend Developer, checkout my professional profile <a className="text-primary hover:underline" href="/marcellonobili">here</a>!
+            </p>
           </div>
         </section>
       </div>

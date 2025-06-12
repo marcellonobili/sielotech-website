@@ -8,11 +8,14 @@ const products = [
   {
     pageName: "furigana-api",
     name: "Furigana API",
-    description: `Kanji are though. It's useless to lie. We provide straightfoward API to get furigana from kanji.
-    
-You can use them for free up to 100 requests per month, after that you can start a subscription for a very small price.
+    description: `Kanji are though. It's useless to lie.
 
-This page is still a work in progress, we will finalize the API and provide links to the documentation soon.`,
+If you need to add furigana to kanji 
+    on a platform that doesn't have an easy to add/use library to get kanji readings, I developed a no-fuss API
+    to get furigana from kanji.
+
+The API is in Beta phase now and it's available for free until 
+    it will be finalized. You can check its documentation [here](https://docs.sielotech.com/furigana).`,
   },
 ]
 
