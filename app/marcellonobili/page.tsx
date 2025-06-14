@@ -64,9 +64,9 @@ export default function Portfolio() {
             </div>
             <div>
               <p className="text-lg text-muted-foreground">
-                I'm a freelance <span className={accentColor}>Mobile</span> and <span className={accentColor}>Backend Developer</span> with expertise in building robust, scalable applications.<br/><br/>
-                My passion lies in creating software that solves real problems, writing <span className={accentColor}>clean, maintainable code.</span><br/><br/>
-                As the founder of <Link href="/" className={`${accentColor} underline ${hoverAccentColor}`}>SieloTech</Link>, I'm focusing, among other projects, on building applications that help people learn <span className={accentColor}>Japanese</span> and explore the Japanese culture.
+                I'm a freelance <span className="text-white">Mobile</span> and <span className="text-white">Backend Developer</span> with expertise in building robust, scalable applications.<br/><br/>
+                My passion lies in creating software that solves real problems, writing <span className="text-white">clean, maintainable code.</span><br/><br/>
+                As the person behind <Link href="/" className={`${accentColor} hover:underline`}>SieloTech</Link>, I'm focusing, among other projects, on building applications that help people learn <span className="text-white">Japanese</span> and explore the Japanese culture.
               </p>
             </div>
           </div>
@@ -76,81 +76,81 @@ export default function Portfolio() {
         <section>
           <h2 className="text-3xl font-bold mb-6">Skills</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Card>
+            <Card className="bg-zinc-800/50">
               <CardHeader>
                 <CardTitle>Mobile Development</CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="list-disc pl-5 space-y-2">
-                  <li className={accentColor}>Android (Kotlin and Java)</li>
+                  <li className={accentColor}><a href="https://developer.android.com" target="_blank" rel="noopener noreferrer" className={`hover:underline`}>Android (Kotlin and Java)</a></li>
                     <ul className="list-disc pl-5 mt-1">
-                      <li>Jetpack Compose</li>
-                      <li>MVVM Architecture</li>
-                      <li>Repository Pattern</li>
-                      <li>Room Database</li>
-                      <li>Coroutines + Flow</li>
-                      <li>WorkManager</li>
-                      <li>Play Store lifecycle</li>
+                      <li className="text-muted-foreground">Jetpack Compose</li>
+                      <li className="text-muted-foreground">MVVM Architecture</li>
+                      <li className="text-muted-foreground">Repository Pattern</li>
+                      <li className="text-muted-foreground">Room Database</li>
+                      <li className="text-muted-foreground">Coroutines + Flow</li>
+                      <li className="text-muted-foreground">WorkManager</li>
+                      <li className="text-muted-foreground">Play Store lifecycle</li>
                     </ul>
                   <br/>
-                  <li className={accentColor}>Flutter</li>
+                  <li className={accentColor}><a href="https://flutter.dev" target="_blank" rel="noopener noreferrer" className={`hover:underline`}>Flutter</a></li>
                   <ul className="list-disc pl-5 mt-1">
-                    <li>Mobile, desktop and web</li>
-                    <li>BLoC pattern</li>
-                    <li>Platform channel</li>
+                    <li className="text-muted-foreground">Mobile, desktop and web</li>
+                    <li className="text-muted-foreground">BLoC pattern</li>
+                    <li className="text-muted-foreground">Platform channel</li>
                   </ul>
                 </ul>
               </CardContent>
             </Card>
-            <Card>
+            <Card className="bg-zinc-800/50">
               <CardHeader>
                 <CardTitle>Backend Development</CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="list-disc pl-5 space-y-2">
-                  <li className={accentColor}>RESTful API Design</li>
-                  <li className={accentColor}>Python</li>
+                  <li className={accentColor}><a href="https://blog.postman.com/rest-api-examples/" target="_blank" rel="noopener noreferrer" className={`hover:underline`}>RESTful API Design</a></li>
+                  <li className={accentColor}><a href="https://www.python.org" target="_blank" rel="noopener noreferrer" className={`hover:underline`}>Python</a></li>
                   <ul className="list-disc pl-5 mt-1">
-                    <li>FastAPI</li>
-                    <li>Flask</li>
-                    <li>PyTest</li>
+                    <li className="text-muted-foreground">FastAPI</li>
+                    <li className="text-muted-foreground">Flask</li>
+                    <li className="text-muted-foreground">PyTest</li>
                   </ul>
-                  <li className={accentColor}>Docker</li>
-                  <li className={accentColor}>PostgreSQL</li>
-                  <li className={accentColor}>Redis</li>
-                  <li className={accentColor}>Celery</li>
-                  <li className={accentColor}>CI/CD</li>
+                  <li className={accentColor}><a href="https://www.docker.com" target="_blank" rel="noopener noreferrer" className={`hover:underline`}>Docker</a></li>
+                  <li className={accentColor}><a href="https://www.postgresql.org" target="_blank" rel="noopener noreferrer" className={`hover:underline`}>PostgreSQL</a></li>
+                  <li className={accentColor}><a href="https://redis.io" target="_blank" rel="noopener noreferrer" className={`hover:underline`}>Redis</a></li>
+                  <li className={accentColor}><a href="https://docs.celeryproject.org" target="_blank" rel="noopener noreferrer" className={`hover:underline`}>Celery</a></li>
+                  <li className={accentColor}><a href="https://github.com/resources/articles/devops/ci-cd" target="_blank" rel="noopener noreferrer" className={`hover:underline`}>CI/CD</a></li>
                   <ul className="list-disc pl-5 mt-1">
-                    <li>GitHub Actions</li>
+                    <li className="text-muted-foreground">GitHub Actions</li>
                   </ul>
                 </ul>
               </CardContent>
             </Card>
-            <Card>
+            <Card className="bg-zinc-800/50">
               <CardHeader>
                 <CardTitle>Cloud and hosting</CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="list-disc pl-5 space-y-2">
-                  <li className={accentColor}>Firebase</li>
+                  <li className={accentColor}><a href="https://firebase.google.com" target="_blank" rel="noopener noreferrer" className={`hover:underline`}>Firebase</a></li>
                   <ul className="list-disc pl-5 space-y-2">
-                    <li>Authentication</li>
-                    <li>Cloud Firestore</li>
-                    <li>Storage</li>
-                    <li>Functions</li>
+                    <li className="text-muted-foreground">Authentication</li>
+                    <li className="text-muted-foreground">Cloud Firestore</li>
+                    <li className="text-muted-foreground">Storage</li>
+                    <li className="text-muted-foreground">Functions</li>
                   </ul>
-                  <li className={accentColor}>Google Cloud</li>
+                  <li className={accentColor}><a href="https://cloud.google.com" target="_blank" rel="noopener noreferrer" className={`hover:underline`}>Google Cloud</a></li>
                   <ul className="list-disc pl-5 space-y-2">
-                    <li>Cloud Run</li>
-                    <li>App Engine</li>
-                    <li>Compute Engine</li>
+                    <li className="text-muted-foreground">Cloud Run</li>
+                    <li className="text-muted-foreground">App Engine</li>
+                    <li className="text-muted-foreground">Compute Engine</li>
                   </ul>
-                  <li className={accentColor}>Supabase</li>
+                  <li className={accentColor}><a href="https://supabase.com" target="_blank" rel="noopener noreferrer" className={`hover:underline`}>Supabase</a></li>
                   <ul className="list-disc pl-5 space-y-2">
-                    <li>Authentication</li>
-                    <li>Realtime</li>
-                    <li>Storage</li>
-                    <li>Functions</li>
+                    <li className="text-muted-foreground">Authentication</li>
+                    <li className="text-muted-foreground">Realtime</li>
+                    <li className="text-muted-foreground">Storage</li>
+                    <li className="text-muted-foreground">Functions</li>
                   </ul>
                 </ul>
               </CardContent>
@@ -164,18 +164,18 @@ export default function Portfolio() {
           <div className="space-y-8">
             <div className="border-l-4 border-primary pl-6 space-y-2">
               <h3 className="text-xl font-semibold">Mobile software engineer</h3>
-              <p className="text-muted-foreground"><a href="https://www.sbsmobile.com/en" target="_blank" rel="noopener noreferrer" className="underline hover:no-underline">SBS Mobile</a> • 2018 - 2023</p>
-              <p>Leader mobile dev, building native Android and Flutter apps both for end users and <a href="https://fastsk.in/en/machines/fast-skin" target="_blank" rel="noopener noreferrer" className="underline hover:no-underline">B2B clients</a>.</p>
+              <p><a href="https://www.sbsmobile.com/en" target="_blank" rel="noopener noreferrer" className={`${accentColor} hover:underline`}>SBS Mobile</a> • 2018 - 2023</p>
+              <p className="text-muted-foreground">Leader mobile dev, building native <span className="text-white">Android and Flutter</span> apps both for end users and <a href="https://fastsk.in/en/machines/fast-skin" target="_blank" rel="noopener noreferrer" className={`${accentColor} hover:underline`}>B2B clients</a>.</p>
             </div>
             <div className="border-l-4 border-primary pl-6 space-y-2">
               <h3 className="text-xl font-semibold">Mobile and web software engineer</h3>
-              <p className="text-muted-foreground">Commission by <a href="https://instagram.com/progetto.rinascita" target="_blank" rel="noopener noreferrer" className="underline hover:no-underline">Progetto Rinascita</a> • 2024</p>
-              <p>I built DataLog, a mobile app that allows analog photographers to keep track of their shots and rolls.</p>
+              <p>Commission by <a href="https://instagram.com/progetto.rinascita" target="_blank" rel="noopener noreferrer" className={`${accentColor} hover:underline`}>Progetto Rinascita</a> • 2024</p>
+              <p className="text-muted-foreground">I developed DataLog <span className="text-white">from start to finish</span>, a mobile app that allows analog photographers to keep track of their shots and rolls.</p>
             </div>
             <div className="border-l-4 border-primary pl-6 space-y-2">
               <h3 className="text-xl font-semibold">Backend software engineer</h3>
-              <p className="text-muted-foreground"><a href="https://www.valueize.com" target="_blank" rel="noopener noreferrer" className="underline hover:no-underline">Valueize</a> • 2025 - Present</p>
-              <p>Building backend services in a startup environment with the mission of empowering founders to build exceptional companies.</p>
+              <p><a href="https://www.valueize.com" target="_blank" rel="noopener noreferrer" className={`${accentColor} hover:underline`}>Valueize</a> • 2025 - Present</p>
+              <p className="text-muted-foreground">Building backend services in a <span className="text-white">startup environment</span> with the mission of empowering founders to build exceptional companies.</p>
             </div>
           </div>
         </section>
@@ -184,12 +184,12 @@ export default function Portfolio() {
         <section>
           <h2 className="text-3xl font-bold mb-6">Personal projects</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <Card>
+            <Card className="bg-zinc-800/50">
               <CardHeader>
                 <CardTitle>Furigana API</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                <p>An API service that converts Japanese kanji to hiragana, helping language learners with pronunciation.</p>
+                <p className="text-muted-foreground">An <span className="text-white">API service</span> that converts Japanese kanji to hiragana, helping <span className="text-white">language learners</span> with pronunciation.</p>
                 <div className="flex justify-end">
                   <Button asChild variant="outline" className="hover:border-purple-500">
                     <Link href="https://docs.sielotech.com/api/furigana">View Project</Link>
@@ -197,13 +197,13 @@ export default function Portfolio() {
                 </div>
               </CardContent>
             </Card>
-            <Card className="relative overflow-hidden">
+            <Card className="relative overflow-hidden bg-zinc-800/50">
               <div className="absolute top-0 right-0 outline outline-1 outline-purple-400 text-white px-3 py-1 text-sm font-semibold transform rotate-0 origin-top-right">Coming Soon</div>
               <CardHeader>
                 <CardTitle>Matané</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
-                <p>A mobile app that leverages AI models to help you practice Japanese in a fun and innovative way.</p>
+                <p className="text-muted-foreground">A mobile app that leverages <span className="text-white">AI models</span> to help you practice Japanese in a fun and innovative way.</p>
               </CardContent>
             </Card>
           </div>
@@ -213,10 +213,10 @@ export default function Portfolio() {
         {/* Contact section */}
         <section>
           <h2 className="text-3xl font-bold mb-6">Get In Touch</h2>
-          <p className="text-lg mb-6">
-            I'm currently available for new projects and collaborations.
+          <p className="text-lg mb-6 text-muted-foreground">
+            I'm currently <span className="text-white">available for new projects and collaborations.</span>
             <br/>
-            If you are looking to hire a skilled mobile or backend developer for your company, <span className={accentColor}>let's talk about how I can help bring your ideas to life!</span>
+            If you are looking to hire a skilled mobile or backend developer for your company, <span className="text-white">let's talk about how I can help bring your ideas to life!</span>
           </p>
           <Button asChild className={`${buttonColor} ${hoverButtonColor}`}>
             <Link href="mailto:marcellonobili@pm.me">Contact Me</Link>

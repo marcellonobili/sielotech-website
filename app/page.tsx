@@ -202,21 +202,25 @@ export default function Home() {
         <section className="mb-16">
           <h2 className="text-3xl font-bold mb-12">Who Am I?</h2>
           <div className="flex flex-col md:flex-row items-center gap-8">
-            <a href="/marcellonobili" className="block w-[220px] h-[220px] rounded-md overflow-hidden flex-shrink-0">
+            <a href="/marcellonobili" className="block w-[250px] h-[250px] rounded-md overflow-hidden flex-shrink-0">
               <Image
                 src="/assets/images/sielo.jpg"
                 alt="Marcello, founder of SieloTech"
-                width={220}
-                height={220}
+                width={250}
+                height={250}
                 className="w-full h-full object-cover"/>
             </a>
             <div>
               <p className="text-lg text-muted-foreground">
-                I'm Marcello Nobili, the founder of SieloTech! I put a lot of effort into producing the best software I can.<br/><br/>
-                I'm studying Japanese and while I conceive most of SieloTech's software
-                to help me in the first place, I strive to help the most people I can in the process.<br/>
-                If you have an interesting idea or feature to tell
-                me about, send me an email at <a className="text-primary hover:underline" href="mailto:marcellonobili@pm.me">marcellonobili@pm.me</a>!
+              Hi, I'm Marcello Nobili, the one person behind SieloTech.
+              I craft software I need first, then refine it so anyone can benefit.
+              <br/>
+              This means I have a great interest in
+              producing software that doesn't just work, but works well.
+              <br/><br/>
+              I'm currently studying Japanese, so many of my projects are born from that passion.
+              <br/><br/>
+              Do you have an interesting idea or feature to tell me about? Don't hesitate to reach out to me at <a className="text-primary hover:underline" href="mailto:marcellonobili@pm.me">marcellonobili@pm.me</a>!
               </p>
             </div>
           </div>
@@ -224,7 +228,7 @@ export default function Home() {
           <br/>
           <div>
             <p className="text-lg text-muted-foreground">
-              I also work as a Freelance Mobile and Backend Developer, checkout my professional profile <a className="text-primary hover:underline" href="/marcellonobili">here</a>!
+              While I bring forward my side projects, I primarily work as a <span className="text-white">Freelance</span> Mobile and Backend Developer, checkout my professional profile <a className="text-primary hover:underline" href="/marcellonobili">here</a>!
             </p>
           </div>
         </section>
