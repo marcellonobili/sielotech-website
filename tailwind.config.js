@@ -15,6 +15,7 @@ module.exports = {
         "2xl": "1400px",
       },
     },
+    
     extend: {
       colors: {
         border: "hsl(var(--border))",
@@ -23,7 +24,7 @@ module.exports = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "hsl(var(--primary))",
+          DEFAULT: "rgb(192, 132, 252)",
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {

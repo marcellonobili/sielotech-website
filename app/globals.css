@@ -111,4 +111,8 @@
       animation: shake 0.3s linear infinite;
     }
   }
+
+  .border-accent {
+    border-color: rgb(192, 132, 252);
+  }
 }

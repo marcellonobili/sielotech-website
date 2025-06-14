@@ -9,6 +9,11 @@ const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "SieloTech",
   description: "Loving Japan more every day",
+  icons: {
+    icon: "/assets/favicon.svg",
+    shortcut: "/assets/favicon.svg",
+    apple: "/assets/favicon.svg",
+  },
 }
 
 export default function RootLayout({

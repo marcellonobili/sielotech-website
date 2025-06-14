@@ -4,6 +4,11 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 
 export default function Portfolio() {
+  const accentColor = "text-purple-400"
+  const hoverAccentColor = "hover:text-purple-500"
+  const buttonColor = "bg-purple-600"
+  const hoverButtonColor = "hover:bg-purple-500"
+
   return (
     <main className="min-h-screen py-16 px-8">
       <div className="max-w-5xl mx-auto space-y-16 md:space-y-24">
@@ -48,20 +53,20 @@ export default function Portfolio() {
         <section>
           <h2 className="text-3xl font-bold mb-12">About Me</h2>
           <div className="flex flex-col md:flex-row items-center gap-8">
-            <div className="w-[220px] h-[220px] rounded-md overflow-hidden flex-shrink-0">
+            <div className="w-[250px] h-[250px] rounded-md overflow-hidden flex-shrink-0">
               <Image
                 src="/assets/images/sielo.jpg"
                 alt="Marcello Nobili"
-                width={220}
-                height={220}
+                width={250}
+                height={250}
                 className="w-full h-full object-cover"
               />
             </div>
             <div>
               <p className="text-lg text-muted-foreground">
-                I'm a freelance <span className="text-purple-500">Mobile</span> and <span className="text-purple-500">Backend Developer</span> with expertise in building robust, scalable applications.<br/><br/>
-                My passion lies in creating software that solves <span className="text-purple-500">real problems</span> while maintaining clean, maintainable code.<br/><br/>
-                As the founder of <Link href="/" className="text-purple-500 hover:underline underline">SieloTech</Link>, I'm focusing on building applications that help people learn <span className="text-purple-500">Japanese</span> and explore Japanese culture.
+                I'm a freelance <span className={accentColor}>Mobile</span> and <span className={accentColor}>Backend Developer</span> with expertise in building robust, scalable applications.<br/><br/>
+                My passion lies in creating software that solves real problems, writing <span className={accentColor}>clean, maintainable code.</span><br/><br/>
+                As the founder of <Link href="/" className={`${accentColor} underline ${hoverAccentColor}`}>SieloTech</Link>, I'm focusing, among other projects, on building applications that help people learn <span className={accentColor}>Japanese</span> and explore the Japanese culture.
               </p>
             </div>
           </div>
@@ -77,10 +82,23 @@ export default function Portfolio() {
               </CardHeader>
               <CardContent>
                 <ul className="list-disc pl-5 space-y-2">
-                  <li>React Native</li>
-                  <li>iOS (Swift)</li>
-                  <li>Android (Kotlin)</li>
-                  <li>Flutter</li>
+                  <li className={accentColor}>Android (Kotlin and Java)</li>
+                    <ul className="list-disc pl-5 mt-1">
+                      <li>Jetpack Compose</li>
+                      <li>MVVM Architecture</li>
+                      <li>Repository Pattern</li>
+                      <li>Room Database</li>
+                      <li>Coroutines + Flow</li>
+                      <li>WorkManager</li>
+                      <li>Play Store lifecycle</li>
+                    </ul>
+                  <br/>
+                  <li className={accentColor}>Flutter</li>
+                  <ul className="list-disc pl-5 mt-1">
+                    <li>Mobile, desktop and web</li>
+                    <li>BLoC pattern</li>
+                    <li>Platform channel</li>
+                  </ul>
                 </ul>
               </CardContent>
             </Card>
@@ -90,24 +108,50 @@ export default function Portfolio() {
               </CardHeader>
               <CardContent>
                 <ul className="list-disc pl-5 space-y-2">
-                  <li>Node.js</li>
-                  <li>Express</li>
-                  <li>Python (Django, FastAPI)</li>
-                  <li>RESTful API Design</li>
-                  <li>GraphQL</li>
+                  <li className={accentColor}>RESTful API Design</li>
+                  <li className={accentColor}>Python</li>
+                  <ul className="list-disc pl-5 mt-1">
+                    <li>FastAPI</li>
+                    <li>Flask</li>
+                    <li>PyTest</li>
+                  </ul>
+                  <li className={accentColor}>Docker</li>
+                  <li className={accentColor}>PostgreSQL</li>
+                  <li className={accentColor}>Redis</li>
+                  <li className={accentColor}>Celery</li>
+                  <li className={accentColor}>CI/CD</li>
+                  <ul className="list-disc pl-5 mt-1">
+                    <li>GitHub Actions</li>
+                  </ul>
                 </ul>
               </CardContent>
             </Card>
             <Card>
               <CardHeader>
-                <CardTitle>Web Development</CardTitle>
+                <CardTitle>Cloud and hosting</CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="list-disc pl-5 space-y-2">
-                  <li>React</li>
-                  <li>Next.js</li>
-                  <li>TypeScript</li>
-                  <li>Tailwind CSS</li>
+                  <li className={accentColor}>Firebase</li>
+                  <ul className="list-disc pl-5 space-y-2">
+                    <li>Authentication</li>
+                    <li>Cloud Firestore</li>
+                    <li>Storage</li>
+                    <li>Functions</li>
+                  </ul>
+                  <li className={accentColor}>Google Cloud</li>
+                  <ul className="list-disc pl-5 space-y-2">
+                    <li>Cloud Run</li>
+                    <li>App Engine</li>
+                    <li>Compute Engine</li>
+                  </ul>
+                  <li className={accentColor}>Supabase</li>
+                  <ul className="list-disc pl-5 space-y-2">
+                    <li>Authentication</li>
+                    <li>Realtime</li>
+                    <li>Storage</li>
+                    <li>Functions</li>
+                  </ul>
                 </ul>
               </CardContent>
             </Card>
@@ -147,14 +191,14 @@ export default function Portfolio() {
               <CardContent className="space-y-4">
                 <p>An API service that converts Japanese kanji to hiragana, helping language learners with pronunciation.</p>
                 <div className="flex justify-end">
-                  <Button asChild>
+                  <Button asChild variant="outline" className="hover:border-purple-500">
                     <Link href="https://docs.sielotech.com/api/furigana">View Project</Link>
                   </Button>
                 </div>
               </CardContent>
             </Card>
             <Card className="relative overflow-hidden">
-              <div className="absolute top-0 right-0 bg-purple-600 text-white px-3 py-1 text-sm font-semibold transform rotate-0 origin-top-right">Coming Soon</div>
+              <div className="absolute top-0 right-0 outline outline-1 outline-purple-400 text-white px-3 py-1 text-sm font-semibold transform rotate-0 origin-top-right">Coming Soon</div>
               <CardHeader>
                 <CardTitle>Matané</CardTitle>
               </CardHeader>
@@ -172,17 +216,17 @@ export default function Portfolio() {
           <p className="text-lg mb-6">
             I'm currently available for new projects and collaborations.
             <br/>
-            If you are looking to hire a skilled mobile or backend developer for your company, <span className="text-purple-500">let's talk about how I can help bring your ideas to life!</span>
+            If you are looking to hire a skilled mobile or backend developer for your company, <span className={accentColor}>let's talk about how I can help bring your ideas to life!</span>
           </p>
-          <Button asChild size="lg">
+          <Button asChild className={`${buttonColor} ${hoverButtonColor}`}>
             <Link href="mailto:marcellonobili@pm.me">Contact Me</Link>
           </Button>
         </section>
 
         {/* Back to home */}
         <div className="text-center pt-8">
-          <Link href="/" className="text-primary hover:underline">
-            ← Back to SieloTech Home
+          <Link href="/" className={`${accentColor} hover:underline`}>
+            ← Back to SieloTech home
           </Link>
         </div>
       </div>
