@@ -6,7 +6,7 @@ import { useMemo } from "react"
 import ReactMarkdown from 'react-markdown'
 
 const products = [
-  { id: 1, pageName: "furigana-api", name: "Furigana API", description: "Convert any kanji to hiragana with our simple API", image: "/assets/images/furigana.png" },
+  { id: 1, pageName: "furigana-api", name: "Furigana API", description: "Convert any kanji to hiragana with our simple API", image: "/assets/images/furigana.jpg" },
 ]
 
 const presents = [
